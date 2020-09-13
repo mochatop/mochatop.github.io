@@ -65,7 +65,13 @@
 				if (ad < maxCount) {
 					fill = 1
 				}
-				div.innerHTML = '광고를 ' + '<font color="red">' + fill + '</font>' + ' 채우고 달리세요!';
+
+				if (fill > 5000) {
+					div.innerHTML = '광고를 꽉꽉 채우고 달리셔도 되겠어요!';
+				} else {
+					div.innerHTML = '광고를 ' + '<font color="red">' + fill + '</font>' + ' 채우고 달리세요!';
+				}
+				
 			} else {
 				div.innerHTML = '광고를 꽉꽉 채우고 달리셔도 되겠어요!';
 			}
