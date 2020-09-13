@@ -1,6 +1,68 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<style type="text/css">
+		div.box
+		{
+    		background-color: #f0f7fb;
+     		border: solid 1px #3498db;
+     		border-radius: 6px;
+     		line-height: 18px;
+     		overflow: hidden;
+     		padding: 15px 30px;
+     		width: 400px
+		}
+	</style>
+	<script type="text/javascript">
+		function calculate() {
+			var ad = parseInt(document.getElementById("ad").value);
+			var energy = parseInt(document.getElementById("energy").value);
+			var maxCount = 40;
+
+			if (ad == 0 || isNaN(ad) || energy == 0 || isNaN(energy)) {
+				alert("광고와 에너지 총량을 입력해주세요!");
+				return;
+			}
+
+			if (energy < 20000) {
+				maxCount = parseInt(energy/500);
+			}
+
+			var div = document.getElementById('result');
+
+			if (maxCount == 0) {
+				div.innerHTML = '으앙 납품을 할수가 없어요..';
+			} else if (ad < 200000) {
+				var fill = parseInt(ad/maxCount);
+				if (ad < maxCount) {
+					fill = 1
+				}
+				div.innerHTML = '광고를 ' + '<font color="red">' + fill + '</font>' + ' 채우고 달리세요!';
+			} else {
+				div.innerHTML = '광고를 꽉꽉 채우고 달리셔도 되겠어요!';
+			}
+
+		}
+	</script>
+</head>
 <body>
-  test!!!
+	<div align="center">
+		<div class="box">
+			<p>
+				가지고 있는 광고 총량 :
+				<input type="number" min="0" name="ad" id="ad">
+			</p>
+			<p>
+				가지고 있는 에너지 총량 :
+				<input type="number" min="0" name="energy" id="energy">
+			</p>
+			<p>
+				<button type="button" onclick="calculate()">결과보기</button>
+			</p>
+			<div id="result">
+			</div>	
+		</div>
+	</div>
+
 </body>
 </html>
