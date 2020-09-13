@@ -67,14 +67,13 @@
 				}
 
 				if (fill >= 5000) {
-					div.innerHTML = '광고를 꽉꽉 채우고 달리셔도 되겠어요!';
+					div.innerHTML = '<font size="2.0em">' + '납품 가능 횟수 총 ' + '<font color="red">' + maxCount + '</font>' + '회'  + '<br>' + '광고를 꽉꽉 채우고 달리셔도 되겠어요!' + '</font>';
 				} else {
-					div.innerHTML = '광고를 ' + '<font color="red">' + fill + '</font>' + ' 채우고 달리세요!';
+					div.innerHTML = '<font size="2.0em">' + '납품 가능 횟수 총 ' + '<font color="red">' + maxCount + '</font>' + '회' + '<br>' +'광고를 ' + '<font color="red">' + fill + '</font>' + ' 채우고 달리세요!' + '</font>';
 				}
 				
 			} else {
-				div.innerHTML = '광고를 꽉꽉 채우고 달리셔도 되겠어요!';
-			}
+				div.innerHTML = '<font size="2.0em">' + '납품 가능 횟수 총 ' + '<font color="red">' + maxCount + '</font>' + '회'  + '<br>' + '광고를 꽉꽉 채우고 달리셔도 되겠어요!' + '</font>';			}
 
 		}
 	</script>
