@@ -19,6 +19,26 @@
   			color: #696969;
   			font-size: 0.75em
 		}
+		button { 
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px; 
+			margin-right:-3px; 
+			border-top-right-radius: 5px; 
+			border-bottom-right-radius: 5px; 
+			margin-left:-3px;
+			border: 1px solid #3498db; 
+			background-color: rgba(0,0,0,0); 
+			color: #3498db; 
+			padding: 5px; 
+		}
+
+		input {
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			border-top-right-radius: 5px; 
+			border-bottom-right-radius: 5px;
+			border: 1px solid #3498db;
+		}
 	</style>
 	<script type="text/javascript">
 		function calculate() {
@@ -27,7 +47,7 @@
 			var maxCount = 40;
 
 			if (ad == 0 || isNaN(ad) || energy == 0 || isNaN(energy)) {
-				alert("광고와 에너지 총량을 입력해주세요!");
+				alert("광고와 에너지를 정확하게 입력해주세요!");
 				return;
 			}
 
@@ -56,14 +76,13 @@
 	<div align="center">
 		<div class="box">
 			<p>
-				경선 1시간동안 총 40회 납품한다고 가정했을 때, 보유중인 광고와 에너지를 가지고 가장 높은 만족도를 채울 수 있는 1회 납품 광고량을 계산합니다. 
-			<p>
-				보유 광고 :
-				<input type="number" min="0" name="ad" id="ad">
+				경선 1시간동안 총 40회 납품한다고 가정했을 때,<br>보유중인 광고와 에너지를 가지고 가장 높은 만족도를 채울 수 있는 1회 납품 광고량을 계산합니다. 
 			</p>
 			<p>
-				보유 에너지 :
-				<input type="number" min="0" name="energy" id="energy">
+				보유 광고 : <input type="number" min="0" name="ad" id="ad">
+			</p>
+			<p>
+				보유 에너지 : <input type="number" min="0" name="energy" id="energy">
 			</p>
 			<p>
 				<button type="button" onclick="calculate()">결과보기</button>
